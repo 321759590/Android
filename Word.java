@@ -3,7 +3,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity//实体，相当于是一张表里的一行数据,List<Word>相当于是一张表
+@Entity//实体，相当于是一张表里的一行数据,List<Word>相当于是一张表,但是表名是Word
 public class Word {
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -12,6 +12,16 @@ public class Word {
     private String word;
     @ColumnInfo(name="chinese_meaning")
     private String chineseMeaning;
+    @ColumnInfo(name="foo_data")
+    private boolean foo;
+
+    public boolean isFoo() {
+        return foo;
+    }
+
+    public void setFoo(boolean foo) {
+        this.foo = foo;
+    }
 
     //构造，id自动生成，不用做参数
     public Word(String word, String chineseMeaning) {

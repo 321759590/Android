@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 //
                 myAdapter1.setAllWords(words);
                 myAdapter2.setAllWords(words);
-                //告诉视图，数据发送了改变
+                //告诉视图，数据发送了改变，重新创建
                 myAdapter1.notifyDataSetChanged();
                 myAdapter2.notifyDataSetChanged();
             }

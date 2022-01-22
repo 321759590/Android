@@ -1,6 +1,5 @@
 package com.example.recyclerview;
 
-
 import android.content.Context;
 import android.os.AsyncTask;
 
@@ -52,9 +51,7 @@ public class WordRepository {
     static class UpdateAsyncTask extends AsyncTask<Word,Void,Void>{
         private WordDao wordDao;
         //通过构造传递过来wordDao
-        public UpdateAsyncTask(WordDao wordDao){
-            this.wordDao=wordDao;
-        }
+        public UpdateAsyncTask(WordDao wordDao){this.wordDao=wordDao;}
         @Override//这个方法写在后台需要进行的操作
         protected Void doInBackground(Word... words) {
             wordDao.updateWords(words);
